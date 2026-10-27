@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import homeRoutes from './home.routes';
 import authRoutes from './auth.routes';
 import userRoutes from './user.routes';
 import adminRoutes from './admin.routes';
@@ -6,6 +7,7 @@ import healthRoutes from './health.routes';
 
 const router = Router();
 
+router.use('/', homeRoutes);
 router.use('/', healthRoutes);
 router.use('/auth', authRoutes);
 router.use('/', userRoutes);

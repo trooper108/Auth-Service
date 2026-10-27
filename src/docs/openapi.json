@@ -87,6 +87,15 @@
     }
   },
   "paths": {
+    "/": {
+      "get": {
+        "summary": "Service landing page",
+        "description": "Returns HTML landing page with links to API docs and health check.",
+        "responses": {
+          "200": { "description": "HTML landing page" }
+        }
+      }
+    },
     "/health": {
       "get": {
         "summary": "Service health check",
